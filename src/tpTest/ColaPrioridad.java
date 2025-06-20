@@ -1,6 +1,6 @@
 package tpTest;
 
-class ColaPrioridad {
+public class ColaPrioridad {
     private static class Nodo {
         String valor;
         int prioridad;
@@ -38,7 +38,13 @@ class ColaPrioridad {
         return elementos[--tamaño].valor;
     }
 
-    public boolean estaVacia() {
-        return tamaño == 0;
+    public void mostrar() {
+        if (tamaño == 0) {
+            System.out.println("Cola vacía.");
+            return;
+        }
+        for (int i = 0; i < tamaño; i++) {
+            System.out.println("Vehículo: " + elementos[i].valor + " | Prioridad: " + elementos[i].prioridad);
+        }
     }
-} 
+}

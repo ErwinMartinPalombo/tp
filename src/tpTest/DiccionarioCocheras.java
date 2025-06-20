@@ -51,4 +51,12 @@ class DiccionarioCocheras {
             }
         }
     }
+    
+    public void mostrarTodas() {
+        System.out.println("Listado de cocheras:");
+        for (int i = 0; i < tamaño; i++) {
+            String estado = disponibles[i] ? "Disponible" : "Ocupada";
+            System.out.println("Cochera: " + claves[i] + " | Dirección: " + ubicaciones[i] + " | Estado: " + estado);
+        }
+    }
 }
